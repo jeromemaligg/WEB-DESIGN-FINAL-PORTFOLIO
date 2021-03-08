@@ -1,0 +1,465 @@
+body{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    text-decoration: none;
+    font-family: "Raleway";
+}
+
+nav{
+    height: 10vh;
+    background: white;
+    width: 96vw;
+    position: absolute;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+}
+.logo{
+    padding: 40px;
+}
+.logo img{
+    width: 100px;
+}
+.nav-links{
+    display: flex;
+}
+.nav-items{
+    list-style: none;
+    padding: 0 20px;
+    font-family: "Bebas";
+    font-size: 12px;
+    cursor: pointer;
+}
+/* SECTION ONE - LANDING */
+section{
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    position: relative;
+}
+.landing{
+display: flex;
+}
+.content{
+    width: 25%;
+    height: 100vh;
+    background: white;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.content h1, .content h5{
+    padding: 0;
+    margin: 5px;
+}
+.content h5{
+    opacity: 0.8;
+}
+.homebtn{
+    padding: 10px 20px;
+    margin-top: 12px;
+    width: 30%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    text-align: center;
+}
+.homebtn a {
+    text-decoration: none;
+    color: #000;
+    font-size: 14px;
+    font-weight: 600;
+
+}
+.profileimage{
+    width: 70%;
+    height: 100vh;
+}
+.profileimage img{
+    width: 100%;
+    filter: contrast(1.2);    
+}
+/* SECTION 2 */
+.portfolio{
+    height: 100vh;
+}
+
+.portfolio-content h1, .portfolio-content h5{
+    padding: 0;
+    margin: 5px;
+}
+.portfolio-content h5{
+    opacity: 0.8;
+}
+.container{
+    padding: 1% 1% 0% 1%;
+}
+.container::after{
+    content: "";
+    display: inline-block;
+    width: 100%;
+}
+.portfolio-content{
+    padding: 20px;
+}  
+.container .box{
+    width: 20%;
+    padding-bottom: 18%;
+}
+.box{
+    width: 96%;
+    margin: 2% 3%;
+    padding-bottom: 96%;
+    height: 0;
+    position: relative;
+    float: left;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.box::after{
+    content: "";
+    position: absolute;
+    background-color: #000;
+    opacity: 0;
+    z-index: 55;
+    width: 100%;
+    height: 100%;
+    transition: all 0.15s ease-out;
+}
+.box:hover::after{
+    background-color: #000;
+    opacity: 0.2;
+
+}
+.container .box .caption{
+    position: absolute;
+    z-index: 60;
+    width: 96%;
+    margin-left: 5%;
+    transform: scale(3);
+    transition: all 0.15s ease-out;
+    color: #fff;
+    opacity: 0;
+    bottom: 10%;
+    text-align: start;
+}
+
+.box:hover .caption{
+    transform: scale(1) translate(0%, -50%);
+    opacity: 1;
+}
+.box img{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    height: 100%;
+    transform: translate(-50%,-50%);
+    z-index: 50;
+    transition: all 0.15s ease-out;
+}
+.box:hover img{
+    height: 150%;
+}
+.box-content{
+    display: flex;
+    flex-direction: column;
+    height: 85vh;
+    justify-content: center;
+}
+
+.box-content h3, .box-content h5{
+    padding: 0;
+    margin: 10px;
+}
+.box-content h5{
+    opacity: 0.5;
+    cursor: pointer;
+}
+/* SECTION THREE */
+.aboutme{
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+.aboutmeimg{
+    padding: 60px 40px;
+    width: 20%;
+}
+.aboutme img{
+    width: 100%;
+    filter: contrast(1.2);
+}
+.aboutmecontent{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    height: 70%;
+}
+.aboutheading h1{
+    font-size: 36px;
+}
+.aboutheading h1::after{
+    content: "";
+    display: block;
+    margin-top: 10px;
+    height: 4px;
+    width: 100px;
+    background: #ccc;
+    border-radius: 15px;
+}
+.aboutdesc p{
+     font-size: 14px;
+     opacity: 0.9;
+     line-height: 30px;
+     text-align: justify;
+}
+.aboutbtn{
+    padding: 10px 20px;
+    width: 18%;
+    align-self: flex-end;
+    background: #000;
+    border-radius: 4px;
+    margin-top: 18%;
+    text-align: center;
+}
+.aboutbtn a{
+    text-decoration: none;
+    color: #fff;
+    opacity: 0.8;
+    font-size: 14px;
+}
+.aboutbgtext h1{
+    font-family: "Bebas";
+    font-size: 100px;
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    top: 35%;
+    transform: rotate(90deg);
+    color: black;
+    opacity: 0.5;
+}   
+/* SECTION 4 */
+.contact{
+    background: #fff;
+    height: 100vh;
+}
+.form{
+    width: 40%;
+}
+.contactheading{
+    padding: 40px;
+}
+
+.contactheading h1, .contactheading h5 {
+padding: 0;
+margin: 5px;
+}
+.contactheading h5{
+    opacity: 0.8;
+    text-transform: uppercase;
+}
+.contactcontent {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+fieldset{
+    border: medium none !important;
+    margin: 0 0 10px;
+    min-width: 100%;
+    padding: 0;
+    width: 100%;
+}
+
+input, textarea{
+    width: 100%;
+    border: 1px solid #ccc;
+    background: #fff;
+    margin: 10px 0 5px;
+    padding: 10px;
+    font-family: "Raleway";
+}
+
+textarea{
+    height: 100px;
+}
+label{
+    font-size: 14px;
+}
+.button{
+    display: flex;
+    justify-content: flex-end;
+    width: 50%;
+}
+button{
+    cursor: pointer;
+    width: 25%;
+    border: none;
+    background: black;
+    color: white;
+    padding: 10px 30px;
+    font-size: 14px;
+    border-radius: 4px;
+}
+.contactimg{
+width: 50%;
+position: relative;
+}
+
+.contactimg img {
+    width: 100%;
+    filter: brightness(0.8);
+}
+.contactimgheading{
+    position: absolute;
+    left: 0;
+    top: -120px;
+    z-index: 10;
+}
+
+.contactimgheading h1 {
+    font-size: 110px;
+    color: white;
+
+}
+.contactimgheading2{
+    position: absolute;
+    right: 0;
+    bottom: -120px;
+    z-index: 10;
+}
+
+.contactimgheading2 h1 {
+    font-size: 110px;
+    color: white;
+
+}
+/* RESPONSIVE */
+@media only screen and (max-width: 540px) {
+    body{
+        width: 96vw;
+        overflow-x: hidden;
+    }
+
+    nav{
+        width: 100vw;
+        padding: 0;
+    }
+    .landing{
+        flex-direction: column;
+    }
+    .content{
+        margin-top: 10%;
+    }
+    .content, .profileimage{
+        width: 100vw;
+        height: 50vh;
+    }
+    /* SECTION 2 */
+    .container{
+        text-align: center;
+    }
+    .portfolio-content h1{
+        font-size: 14px; 
+    }
+    .portfolio-content h5{
+        font-size: 12px;
+    }
+
+    .container .box{
+        width: 30%;
+        padding-bottom: 30%;
+        margin-bottom: 20px;
+        left: 15%;
+    }
+    .box-content h3{
+        display: none;
+    }
+    .box-content h5{
+        font-size: 14px;
+    }
+    .container .box .caption{
+        opacity: 1;
+        transform: scale(1);
+        bottom: 5%;
+    }
+    .box::after{
+        opacity: 0.3;
+        left: 0;
+    }
+    .box-content{
+        display: inline-block;
+    }
+    /* SECTION 3 */
+    .aboutme{
+        flex-direction: column;
+        text-align: center;
+    }
+    .aboutmeimg{
+        width: 40vw;
+        padding: 0;
+        margin-top: 5vh;
+        }
+        .aboutmecontent{
+            width: 80vw;
+        }
+        .aboutheading h1::after{
+        display: none;
+        }
+        .aboutbgtext{
+            display: none;
+        }
+        .aboutheading h1 {
+            font-size: 18px;
+        }
+        .aboutdesc p {
+            font-size: 10px;
+        }
+        .aboutbtn{
+            padding: 10px 20px;
+            width: 40%;
+            margin-top: 5%;
+            align-self: center;
+        }
+        /* SECTION 4 */
+    .contact{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .contactcontent{
+        flex-direction: column;
+    }
+    .contactheading{
+        text-align: center;
+    }
+    .form{
+        width: 90vw;
+
+    }
+    input, textarea{
+        width: 95%;
+    }
+    button{
+        width: 100%;
+    }
+    .contactimg {
+        display: none;
+    }
+
+
+}
+
+
+
+
